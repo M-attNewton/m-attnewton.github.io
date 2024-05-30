@@ -1,5 +1,5 @@
 ---
-title: "rnn1"
+title: "Designing Rational Neural Network Controllers"
 excerpt: "Rational neural networks when used as feedback controllers align better in the optimisation problem compared to traditional neural networks, allowing them to be easily and effectively designed."
 collection: portfolio
 ---
