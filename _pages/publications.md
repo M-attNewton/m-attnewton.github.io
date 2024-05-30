@@ -29,6 +29,10 @@ author_profile: true
 
 * M. Newton and A. Papachristodoulou, “Rational Neural Network Controllers", arXiv preprint arXiv:2307.06287, 2023.
 
+## Thesis
+
+* M.Newton, "Analysis of Robust Neural Networks for Control", University of Oxford, 2023.
+
 {% include base_path %}
 
 {::comment} 
