@@ -35,11 +35,16 @@ collection: portfolio
 * Tighter reachable sets are computed over competitive methods.
 
 ![](/images/NFLModelLabled.png)
+*Diagram of a feedback system which is controlled by a neural network, this is known as a neural feedback loop.*
 
 ![](/images/ReachableConvexSets.png)
+*Diagram of the convex outer-approximations of the reachable sets that are computed using this method.*
 
 ![](/images/IPStability.png)
+*Comparing the regions of attraction for different methods for a non-linear inverted pendulum. Showing that this approach “NNSOSStability” can obtain larger regions.*
 
 ![](/images/DuffOscReach.png)
+*Approximate reachable set of a Duffing Oscillator computing using this method.*
 
 ![](/images/3DSysStability.png)
+*The region of attraction this method, the blue trajectories are stable, whereas the red ones are not.*
