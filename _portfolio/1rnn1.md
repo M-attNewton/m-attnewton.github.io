@@ -31,3 +31,7 @@ collection: portfolio
 * Effectively provides controllers for systems with non-linear plants, noise and parametric uncertainty.
 
 ADD FIGURES
+
+![Test Image](/images/RtanhCompare.pdf)
+
+
