@@ -4,7 +4,7 @@ excerpt: "By utilising the natural cascading structure of the neural network, th
 collection: portfolio
 ---
 
-[Github](https://github.com/M-attNewton/NNPsatzSparse "Github") | [Paper](https://www.sciencedirect.com/science/article/pii/S0005109823003941 "Paper")
+[Github](https://github.com/M-attNewton/NNPsatzSparse "Github"), [Paper](https://www.sciencedirect.com/science/article/pii/S0005109823003941 "Paper")
 
 ## Motivation
 
