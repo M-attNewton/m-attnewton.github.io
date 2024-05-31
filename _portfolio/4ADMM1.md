@@ -12,8 +12,6 @@ collection: portfolio
 
 * Compare the solve times of different solvers and show how accuracy can be improved at the expense of increased computation time.
 
-![](/images/5by20SparsityCE.png)
+![](/images/Matthew_Newton_Poster.png)
 *The sparsity pattern of the constraint matrix for a twenty-layer neural network with five hidden units in each layer.*
 
-
-![](/images/Matthew_Newton_Poster.png)
