@@ -32,6 +32,6 @@ collection: portfolio
 
 ADD FIGURES
 
-![Test Image](/images/RtanhCompare.pdf)
+![Test Image](/images/IPRationalNonlinear.png)
 
 
