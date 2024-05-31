@@ -31,11 +31,14 @@ collection: portfolio
 * Effectively provides controllers for systems with non-linear plants, noise and parametric uncertainty.
 
 ![](/images/RtanhCompare.png)
+*A comparison between the traditional tanh(x) activation function and the Rtanh(x) function which is a new rational approximation.*
 
 ![](/images/IPRtanhROA.png)
+*Diagram showing the region of attraction for an inverted pendulum controlled by a neural network, where the tanh activation function is replaced with the Rtanh function.*
 
 ![](/images/3DPolyRational.png)
+*Plot showing the trajectories of the system states for a three dimensional non-linear system which is controlled by a rational neural network using this method.*
 
 ![](/images/IPRationalNonlinear.png)
-
+*Plot showing the trajectories of the system states for a non-linear inverted pendulum which is controlled by a rational neural network using this method.*
 
