@@ -33,9 +33,13 @@ collection: portfolio
 * Compare the solve times of different solvers and show how accuracy can be improved at the expense of increased computation time.
 
 ![](/images/5by20SparsityCE.png)
+*The sparsity pattern of the constraint matrix for a twenty-layer neural network with five hidden units in each layer.*
 
 ![](/images/bigCSP.png)
+*Diagram of a neural network showing how it is broken down by its natural cascading structure.*
 
 ![](/images/2NodesVaryLayersRelu.png)
+*Comparing the computational time of different approaches for a neural network with two nodes in each layer and a varying number of layers.*
 
 ![](/images/2by8by5by2Relu.png)
+*Comparing the accuracy of different approaches to the true values of the neural network's output.*
