@@ -32,4 +32,10 @@ collection: portfolio
 
 * Compare the solve times of different solvers and show how accuracy can be improved at the expense of increased computation time.
 
-ADD FIGURES
+![](/images/5by20SparsityCE.png)
+
+![](/images/bigCSP.png)
+
+![](/images/2NodesVaryLayersRelu.png)
+
+![](/images/2by8by5by2Relu.png)
