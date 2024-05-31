@@ -4,6 +4,8 @@ excerpt: "Rational neural networks when used as feedback controllers align bette
 collection: portfolio
 ---
 
+[Github](https://github.com/M-attNewton/RationalNNDesign "Github") | [Paper](https://arxiv.org/pdf/2307.06287 "Paper")
+
 ## Motivation
 
 * Neural networks have been shown to be effective as controllers in feedback systems.
