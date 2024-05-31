@@ -4,7 +4,7 @@ excerpt: "Stability and reachability robustness indicators for systems with neur
 collection: portfolio
 ---
 
-[Github (Stability)](https://github.com/M-attNewton/NNControllerStability "Github"), [Github (Reachability)](https://github.com/M-attNewton/NNControllerReachability "Github"), [Paper](https://arxiv.org/pdf/2307.06287 "Paper")
+[Github (Stability)](https://github.com/M-attNewton/NNControllerStability "Github"), [Github (Reachability)](https://github.com/M-attNewton/NNControllerReachability "Github"), [Paper (Stability)](https://ieeexplore.ieee.org/abstract/document/9993191 "Paper"), [Paper (Reachability)](https://ieeexplore.ieee.org/abstract/document/9992719 "Paper")
 
 ## Motivation
 
