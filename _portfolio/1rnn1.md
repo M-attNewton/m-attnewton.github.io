@@ -4,7 +4,7 @@ excerpt: "Rational neural networks when used as feedback controllers align bette
 collection: portfolio
 ---
 
-[Github](https://github.com/M-attNewton/RationalNNDesign "Github") | [Paper](https://arxiv.org/pdf/2307.06287 "Paper")
+[Github](https://github.com/M-attNewton/RationalNNDesign "Github"), [Paper](https://arxiv.org/pdf/2307.06287 "Paper")
 
 ## Motivation
 
