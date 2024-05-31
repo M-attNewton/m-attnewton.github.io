@@ -4,6 +4,8 @@ excerpt: "By utilising the natural cascading structure of the neural network, th
 collection: portfolio
 ---
 
+[Github](https://github.com/M-attNewton/NNPsatzSparse "Github") | [Paper](https://www.sciencedirect.com/science/article/pii/S0005109823003941 "Paper")
+
 ## Motivation
 
 * Neural networks are more widespread and obtain robustness guarantees for them are important, especially in safety-critical applications. 
