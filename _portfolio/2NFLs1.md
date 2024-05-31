@@ -34,4 +34,12 @@ collection: portfolio
 
 * Tighter reachable sets are computed over competitive methods.
 
-ADD FIGURES
+![](/images/NFLModelLabled.png)
+
+![](/images/ReachableConvexSets.png)
+
+![](/images/IPStability.png)
+
+![](/images/DuffOscReach.png)
+
+![](/images/3DSysStability.png)
