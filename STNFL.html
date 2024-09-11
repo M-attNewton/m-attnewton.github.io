@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Stability and Reachability of Neural Feedback Loops</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title"></a>
+				<nav>
+					<ul>
+						<li><a href="index.html#intro">About</a></li>
+						<li><a href="index.html#one">Portfolio</a></li>
+						<li><a href="index.html#two">Publications</a></li>
+						<li><a href="index.html#three">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Stability and Reachability of Neural Feedback Loops</h1>
+                            <a href="https://github.com/M-attNewton/NNControllerStability">GitHub (Stability)</a>, 
+                            <a href="https://github.com/M-attNewton/NNControllerReachability">GitHub (Reachability)</a>, 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9993191">Paper (Stability)</a>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9992719">Paper (Reachability)</a>
+							<!--<span class="image fit"><img src="images/pic04.jpg" alt="" /></span> -->
+                            <h2>Motivation</h2>
+							<ul>
+                                <li>Non-linearities in neural networks make them effective but consequently make analysis difficult.</li>
+                                <li>Recent research has allowed neural networks to be designed as controllers in feedback systems, but only addresses linear systems.</li>
+                                <li>Stability, region of attraction and reachability are key robustness indicators, especially for safety-critical applications.</li>
+                            </ul>
+                            <span class="image fit"><img src="images/project/NFLModelLabled.png" alt="" /></span>
+                            <p class="caption">Diagram of a feedback system which is controlled by a neural network, this is known as a neural feedback loop.</p>
+                            <h2>Contribution</h2>
+                            <ul>
+                                <li>Abstract the neural network’s non-linear equations as a convex constraint set.</li>
+                                <li>Use Sum of Squares programming framework to compute the stability and reachability of non-linear systems with neural network controllers directly.</li>
+                                <li>Exploit the sparsity of neural networks to reduce solve times using previous project on “Neural Network Verification by Exploiting Sparsity”.</li>
+                            </ul>
+                            <span class="image fit"><img src="images/project/ReachableConvexSets.png" alt="" /></span>
+                            <p class="caption">Diagram of the convex outer-approximations of the reachable sets that are computed using this method.</p>
+                            <h2>Analysis</h2>
+                            <ul>
+                                <li>Create more accurate tests using “Positivstellensatz” and higher order Lyapunov functions to better capture dynamics of system.</li>
+                                <li>Analyse systems in continuous time, where different methods rely on discretising system.</li>
+                                <li>Evaluate non-linear systems directly with parametric uncertainty.</li>
+                            </ul>
+                            <h2>Results</h2>
+                            <ul>
+                                <li>Better stability guarantees are obtained as volume of the region of attraction is increased compared to other methods.</li>
+                                <li>Tighter reachable sets are computed over competitive methods.</li>
+                            </ul>
+                            <span class="image fit"><img src="images/project/IPStability.png" alt="" /></span>
+                            <p class="caption">Comparing the regions of attraction for different methods for a non-linear inverted pendulum. Showing that this approach “NNSOSStability” can obtain larger regions.</p>
+                            <span class="image fit"><img src="images/project/DuffOscReach.png" alt="" /></span>
+                            <p class="caption">Approximate reachable set of a Duffing Oscillator computing using this method.</p>
+                            <span class="image fit"><img src="images/project/3DSysStability.png" alt="" /></span>
+                            <p class="caption">The region of attraction this method, the blue trajectories are stable, whereas the red ones are not.</p>
+                        </div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+            <footer id="footer" class="wrapper style1-alt">
+                <div class="inner">
+                    <ul class="menu">
+                        <li>&copy; Matthew Newton 2024. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

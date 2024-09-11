@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Designing Rational Neural Network Controllers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title"></a>
+				<nav>
+					<ul>
+						<li><a href="index.html#intro">About</a></li>
+						<li><a href="index.html#one">Portfolio</a></li>
+						<li><a href="index.html#two">Publications</a></li>
+						<li><a href="index.html#three">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Designing Rational Neural Network Controllers</h1>
+                            <a href="https://github.com/M-attNewton/RationalNNDesign">GitHub</a>, <a href="https://arxiv.org/pdf/2307.06287">Paper</a>
+                            <h2>Motivation</h2>
+							<ul>
+                                <li>Neural networks have been shown to be effective as controllers in feedback systems.</li>
+                                <li>Current approaches use existing neural network architectures taken from traditional machine learning tasks.</li>
+                                <li>Neural networks with rational activation functions have been successful in previous application areas.</li>
+                            </ul>
+                            <h2>Contribution</h2>
+                            <ul>
+                                <li>Introduce novel rational activation functions for traditional “sigmoid” and “tanh” activation functions.</li>
+                                <li>Propose new rational neural network structure to preserve convexity in optimisation problem when designing a controller with stability guarantees.</li>
+                            </ul>
+                            <span class="image fit"><img src="images/project/RtanhCompare.png" alt="" /></span>
+                            <p class="caption">A comparison between the traditional tanh(x) activation function and the Rtanh(x) function which is a new rational approximation.</p>
+                            <h2>Analysis</h2>
+                            <ul>
+                                <li>Show the benefit of using rational activation functions to avoid use of highly non-linear activation functions.</li>
+                                <li>Formulated convex method to find a stabilising controller using Sum of Squares optimisation.</li>
+                            </ul>
+                            <h2>Results</h2>
+                            <ul>
+                                <li>Numerical examples demonstrate that this approach can successfully find stabilising rational neural network controllers.</li>
+                                <li>Effectively provides controllers for systems with non-linear plants, noise and parametric uncertainty.</li>
+                            </ul>
+                            <span class="image fit"><img src="images/project/IPRtanhROA.png" alt="" /></span>
+                            <p class="caption">Diagram showing the region of attraction for an inverted pendulum controlled by a neural network, where the tanh activation function is replaced with the Rtanh function.</p>
+                            <span class="image fit"><img src="images/project/3DPolyRational.png" alt="" /></span>
+                            <p class="caption">Plot showing the trajectories of the system states for a three dimensional non-linear system which is controlled by a rational neural network using this method.</p>
+                            <span class="image fit"><img src="images/project/IPRationalNonlinear.png" alt="" /></span>
+                            <p class="caption">Plot showing the trajectories of the system states for a non-linear inverted pendulum which is controlled by a rational neural network using this method.</p>
+                        </div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+            <footer id="footer" class="wrapper style1-alt">
+                <div class="inner">
+                    <ul class="menu">
+                        <li>&copy; Matthew Newton 2024. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

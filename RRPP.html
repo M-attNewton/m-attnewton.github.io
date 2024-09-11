@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Restaurant Review Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title"></a>
+				<nav>
+					<ul>
+						<li><a href="index.html#intro">About</a></li>
+						<li><a href="index.html#one">Portfolio</a></li>
+						<li><a href="index.html#two">Publications</a></li>
+						<li><a href="index.html#three">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Restaurant Review Prediction</h1>
+                            <a href="https://github.com/M-attNewton/review-prediction">GitHub</a>
+                            <h2>Summary</h2>
+                            <p>This is a personal project to predict the review ratings (1-5) of restaurants given the written review and additional information about the restaurant.</p>
+							<p>This project involves:</p>
+                            <ul>
+                                <li>Data cleaning: e.g. Removing stopwords, Lemmatization, Tokenization etc.</li>
+                                <li>Feature engineering: Creating additional features, One hot encoding, Scaling etc.</li>
+                                <li>Establishing a baseline model: Multi-class regression</li>
+                                <li>Experimenting with different Deep Learning methods: LSTMs, Transformers, Gradient Boosting Methods, Neural Networks</li>
+                                <li>Creating an ensemble machine learning model</li>
+                            </ul>
+                            <h2>Data Cleaning</h2>
+                            <p>The main dataset is a very large collection of restaurant reviews (over two million samples). Consisting of the written review, review title, date, review ID, restaurant ID and rating (target label). There is an additional dataset containing details about the restaurant, consisting of resturant ID, name, price interval, rating and type.</p>
+                            <p>The datasets are merged together on the restaurant ID to incorporate the restaurant data into each review sample. Feature engineering and cleaning are then performed on the dataset, for more details please see the Clean_Data notebook.</p>
+                            <p>The dataset is cleaned using the Clean_Data notebook and is then saved to be reused in the other notebooks, this is to save time when training the machine learning models.</p>
+                            <h2>Feature Engineering</h2>
+                            <p>Additional features are created, such as the review length which could indicate a relationship with the rating. The date is converted into integer values and then scaled using a Gaussian distribution along with the average restaurant rating and review length. In some models, the review title and full written review are combined into a single feature to improve the computation efficiency of the approaches. The Price interval is converted into an integer value and then parsed through a one hot encoder along with the restaurant type to create the features to be used in the machine learning models.</p>
+                            <p>The dataset is split into training, cross-validation and test sets, using a 70%, 15%, 15% split.</p>
+                            <h2>Baseline Model</h2>
+                            <p>Linear Multi-class Classification is used as the baseline model, using a large feature set which gives an idea of a baseline performance. The text features are parsed through a term frequency-inverse document frequency (TF-IDF) Vectorizer to create the text features. These are combined with the restaurant type, price, date, review length and average restaurant rating.</p>
+                            <p>This model achieves an accuracy of 71.5% which establishes our baseline.</p>
+                            <h2>Deep Learning Models</h2>
+                            <p>Many different deep learning methods were tested - this repository highlights some of the interesting models.</p>
+                            <h3>Gradient Boosting Method (LightGBM)</h3>
+                            <p>Since the dataset is tabular in nature, a tree-based method with gradient boosting is a good model to try. The same features are used as in the linear case. LightGBM is used as the model as it is known to be better at handling large datasets. The hyperparameters such as the number of leaves, number of estimators and learning rate are tuned to produce an accuracy score of 71.5%, which is the same as the linear model.</p>
+                            <h3>Neural Network</h3>
+                            <p>A neural network is a good model to try next due to its ability to handle both structured and unstructured data, in this case the tabular and text datatypes respectively. It is unlikely to outperform transformers or LSTMs as it will not be able to capture the context of the sentences as well but it can easily incorporate the other data types into the model. TF-IDF Vectorizer is used as in the linear model, a word embedding such as GloVe or Word2Vec would be more effective but more computationally expensive. Dropout and regularisation techniques are used to avoid overfitting. The neural network hyperparameters are tuned such that it can be run efficiently on a CPU and an accuracy score of 68% in achieved.</p>
+                            <h3>Transformer</h3>
+                            <p>A transformer model would be the gold standard for this type of task, perhaps with a custom ensemble technique to combine the tabular data or combining the model with XGBoost or LightGBM. Due to limited computational resources a small pre-trained model ("TinyBERT") was used and fine-tuned over a few epochs. Different models and techniques were trialled, however only a subset of the dataset was trained on for computational efficiency, a score of 68% was achieved which is promising given the limited scope of this approach.</p>
+                            <h2>Ensemble Model</h2>
+                            <h3>Linear Classification and LightGBM (CPU)</h3>
+                            <p>To create an effective Ensemble model that can be run on a CPU with a dataset of this size, a linear classifier is used to analyse the text data, whilst the LightGBM ensemble tree model is used to handle the tabular categorical and numerical data types. The output of the linear classifier is added back into the dataset and concatenated with the remaining features, this dataset is then parsed into the LightGBM model. This method provides an accuracy score of 72.5%, improving on the baseline</p>
+                            <h3>LSTM and Neural Network (GPU)</h3>
+                            <p>To better capture the meaning in the text data, a Long Short-Term Memory (LSTM) network can be used and can be more efficient to train than transformers. They can also be trained alongside another neural network that captures the categorical and numerical features, creating an ensemble model. A pre-trained embedding layer using GloVe is defined followed by an LSTM layer, the output of this layer is concatenated with the categorical and numerical features and parsed through a fully-connected layer, a softmax function is used to create the output layer of the network. Dropout and regularisation techniques are used to avoid overfitting.</p>
+                            <p>This model is much larger and hence needs to be run on a GPU and these resources were limited so only a handful of experiments were run. An accuracy score of 73.3% was achieved and likely could be increased with greater resources and a larger model.</p>
+                            <h2>Future Work</h2>
+                            <ul>
+                                <li>One model that would be interesting to try would be to use a BERT Embedding for the text data and combine this with the categorical and numerical features to create the full set of features, then use XGBoost (if more computation is available) or LightGBM if restricted to a CPU.</li>
+                                <li>There are many other models that could be explored, it would also be interesting to look at what other features could be created to expand the dataset.</li>
+                                <li>Most of these experiments were restricted in terms of the computational resources available, therefore with greater access to GPUs these models could be improved.</li>
+                            </ul>
+                        </div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+            <footer id="footer" class="wrapper style1-alt">
+                <div class="inner">
+                    <ul class="menu">
+                        <li>&copy; Matthew Newton 2024. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
